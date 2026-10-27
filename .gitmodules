@@ -1,0 +1,12 @@
+[submodule "engine"]
+	path = engine
+	url = https://github.com/mitpokerbots/engine-2026
+[submodule "references/ref1"]
+	path = references/ref1
+	url = https://github.com/mitpokerbots/reference-1-2026
+[submodule "references/ref2"]
+	path = references/ref2
+	url = https://github.com/mitpokerbots/reference-2-2026
+[submodule "references/ref3"]
+	path = references/ref3
+	url = https://github.com/mitpokerbots/reference-3-2026

@@ -1,0 +1,79 @@
+{
+  "kanvas": 1,
+  "title": "pokerbot",
+  "groups": [
+    {
+      "id": "BS",
+      "name": "Base"
+    },
+    {
+      "id": "LD",
+      "name": "Ladder"
+    },
+    {
+      "id": "SP",
+      "name": "Sprint"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "BS-01",
+      "title": "Understand the 2026 variant",
+      "state": "proposed",
+      "group": "BS",
+      "at": "2026-10-27T19:08:03Z",
+      "by": "agent",
+      "desc": "Read the rules (3 hole cards, discard after the flop) and the skeleton code until you can explain what the bot receives and what it must answer on each turn. Done when there's a short docs/rules.md written in your own words."
+    },
+    {
+      "id": "BS-02",
+      "title": "Bot that never breaks",
+      "state": "proposed",
+      "group": "BS",
+      "deps": ["BS-01"],
+      "at": "2026-10-27T19:08:03Z",
+      "by": "agent",
+      "desc": "juanbot always plays a legal action and never times out over 1000 hands. Done when scripts/match.sh finishes with no errors in the bot's log."
+    },
+    {
+      "id": "LD-01",
+      "title": "Beat ref1 (toss smallest)",
+      "state": "proposed",
+      "group": "LD",
+      "deps": ["BS-02"],
+      "at": "2026-10-27T19:08:03Z",
+      "by": "agent",
+      "desc": "Smart discard plus basic hand strength. Done when juanbot wins over 1000 hands against references/ref1, in 3 runs out of 3."
+    },
+    {
+      "id": "LD-02",
+      "title": "Beat ref2 (good cards)",
+      "state": "proposed",
+      "group": "LD",
+      "deps": ["LD-01"],
+      "at": "2026-10-27T19:08:03Z",
+      "by": "agent",
+      "desc": "Preflop ranges and pot odds. Done when juanbot beats ref2 in 3 runs out of 3."
+    },
+    {
+      "id": "LD-03",
+      "title": "Beat ref3 (Monte Carlo)",
+      "state": "proposed",
+      "group": "LD",
+      "deps": ["LD-02"],
+      "at": "2026-10-27T19:08:03Z",
+      "by": "agent",
+      "desc": "Monte Carlo equity, bet sizing and some bluffing. Done when juanbot beats ref3 in 3 runs out of 3."
+    },
+    {
+      "id": "SP-01",
+      "title": "60-minute sprint",
+      "state": "proposed",
+      "group": "SP",
+      "deps": ["LD-01"],
+      "at": "2026-10-27T19:08:03Z",
+      "by": "agent",
+      "desc": "Rehearsal in the style of the Sequoia tournament: from an empty skeleton, a bot built with coding agents in 60 minutes. Done when that bot beats ref1 and we write down what slowed us down."
+    }
+  ]
+}
