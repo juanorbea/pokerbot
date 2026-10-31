@@ -19,11 +19,18 @@
     {
       "id": "BS-01",
       "title": "Understand the 2026 variant",
-      "state": "doing",
+      "state": "review",
       "group": "BS",
       "at": "2026-10-27T19:08:03Z",
       "by": "agent",
-      "desc": "Read the rules (3 hole cards, discard after the flop) and the skeleton code until you can explain what the bot receives and what it must answer on each turn. Done when there's a short docs/rules.md written in your own words."
+      "desc": "Read the rules (3 hole cards, discard after the flop) and the skeleton code until you can explain what the bot receives and what it must answer on each turn. Done when there's a short docs/rules.md written in your own words.",
+      "notes": [
+        {
+          "at": "2026-10-31T11:18:31Z",
+          "by": "Proto",
+          "text": "Rules doc merged in PR #1 (docs/rules.md)."
+        }
+      ]
     },
     {
       "id": "BS-02",
